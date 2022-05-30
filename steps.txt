@@ -1,0 +1,4 @@
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 592891983137.dkr.ecr.us-east-1.amazonaws.com 
+# aws ecr create-repository --repository-name hello-world --image-scanning-configuration scanOnPush=true --image-tag-mutability MUTABLE
+docker tag  metashape-test:latest 592891983137.dkr.ecr.us-east-1.amazonaws.com/metashape-test:latest
+docker push 592891983137.dkr.ecr.us-east-1.amazonaws.com/metashape-test:latest           
